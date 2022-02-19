@@ -1,2 +1,2 @@
 # Kjell-CompanyNOKode
-Kjell &amp; Company streamkode
+Kjell &amp; Company koder fra sendinger!
