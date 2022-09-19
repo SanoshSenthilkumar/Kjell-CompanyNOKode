@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import os
 
-
+#Endre lokasjon til preferert mappe
 lokasjon = "/home/pi/BilderFraOvervaakningskameraet/"
 
 bildenavn1, bildenavn2 = "bilde1", "bilde2"
@@ -14,7 +14,7 @@ bildebane2 = lokasjon + "bilde2.jpg"
 
 
 def bevegelse(bilde1, bilde2):
-    #lagrer informasjon om bildene
+    #Lagrer informasjon om bildene
     #hentet fra https://betterprogramming.pub/how-to-measure-image-similarities-in-python-12f1cb2b7281
     bilde1_lest = cv2.imread(bildebane1)
     graa_bilde1 = cv2.cvtColor(bilde1_lest, cv2.COLOR_BGR2GRAY)
@@ -46,13 +46,13 @@ def bevegelse(bilde1, bilde2):
 
 
 def main():
-    #for å gjøre klart kamera
+    #For å gjøre klart kamera
     kamera = PiCamera()
 
-    #for å forhindre at bilder blir lagret med samme navn og blir overskrevet
+    #For å forhindre at bilder blir lagret med samme navn og blir overskrevet
     indeks = 1
 
-    #loop for å sjekke bevegelse
+    #En loop for å sjekke bevegelse
     while True:
         bilde1 = kamera.capture(bildebane1)
         sleep(2)
